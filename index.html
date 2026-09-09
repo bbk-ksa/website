@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <title>Beauty by K. | Coming Soon</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -16,10 +14,10 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, "Segoe UI", sans-serif;
             min-height: 100vh;
             background: #ffffff;
-            color: #333333;
+            color: #3d302b;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,119 +30,93 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
             padding: 40px 20px;
+            position: relative;
         }
 
         /* Language Button */
-
-        .language-btn {
+        .language-switch {
             position: absolute;
             top: 25px;
             right: 30px;
-
-            background: transparent;
-            border: 1px solid #b98a68;
-            color: #9b6c4d;
-
-            padding: 9px 18px;
-            border-radius: 25px;
-
-            font-size: 14px;
-            cursor: pointer;
-
-            transition: all 0.3s ease;
         }
 
-        .language-btn:hover {
-            background: #b98a68;
+        .language-switch button {
+            background: #ffffff;
+            border: 1px solid #c9a17d;
+            color: #8b6046;
+            padding: 9px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .language-switch button:hover {
+            background: #c9a17d;
             color: white;
         }
 
-        /* Main Container */
-
         .container {
             width: 100%;
-            max-width: 750px;
+            max-width: 720px;
             padding: 30px;
         }
 
         /* Logo */
-
-        .logo {
-            display: block;
-            width: 280px;
+        .logo-image {
+            width: 330px;
             max-width: 80%;
             height: auto;
-
+            display: block;
             margin: 0 auto 35px auto;
         }
 
-        /* Store Name */
-
         .brand-name {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 42px;
-            font-weight: normal;
-
-            color: #a87550;
-
-            letter-spacing: 2px;
-
-            margin-bottom: 20px;
+            font-size: 17px;
+            letter-spacing: 4px;
+            color: #8b6046;
+            margin-bottom: 25px;
+            text-transform: uppercase;
         }
-
-        /* Main Heading */
 
         h1 {
-            font-size: 38px;
-            font-weight: 500;
-
-            color: #333333;
-
-            margin-bottom: 20px;
+            font-size: 44px;
+            font-weight: 400;
+            color: #3d302b;
+            margin-bottom: 18px;
         }
 
-        /* Decorative Line */
+        .arabic-title {
+            font-size: 42px;
+            font-weight: 400;
+            color: #3d302b;
+            margin-bottom: 18px;
+        }
 
         .line {
-            width: 70px;
-            height: 3px;
-
-            background: #b98a68;
-
+            width: 75px;
+            height: 2px;
+            background: #c9a17d;
             margin: 25px auto;
-
-            border-radius: 10px;
         }
 
-        /* Description */
-
-        .message {
-            font-size: 18px;
-            line-height: 1.8;
-
-            color: #777777;
-
-            margin-bottom: 35px;
+        .description {
+            font-size: 19px;
+            line-height: 1.9;
+            color: #756862;
+            margin-bottom: 30px;
         }
-
-        /* Contact */
 
         .contact {
             font-size: 15px;
+            color: #8c817c;
             line-height: 1.8;
-
-            color: #888888;
-
-            margin-top: 25px;
         }
 
         .contact a {
-            color: #a87550;
-
+            color: #8b6046;
             text-decoration: none;
-
             font-weight: 500;
         }
 
@@ -152,239 +124,208 @@
             text-decoration: underline;
         }
 
-        /* Footer */
-
         .footer {
             margin-top: 55px;
-
-            font-size: 13px;
-
-            color: #aaaaaa;
+            font-size: 12px;
+            color: #aaa09b;
         }
 
         /* Arabic */
-
-        .arabic {
+        body.arabic {
             direction: rtl;
         }
 
-        /* Mobile */
+        body.arabic .language-switch {
+            left: 30px;
+            right: auto;
+        }
 
+        body.arabic .description {
+            font-size: 18px;
+        }
+
+        /* Mobile */
         @media (max-width: 600px) {
 
             .page {
                 padding: 30px 15px;
             }
 
-            .language-btn {
+            .language-switch {
                 top: 18px;
                 right: 18px;
+            }
 
-                padding: 8px 15px;
-                font-size: 13px;
+            body.arabic .language-switch {
+                left: 18px;
+                right: auto;
             }
 
             .container {
                 padding: 20px;
             }
 
-            .logo {
-                width: 230px;
-                margin-bottom: 25px;
-            }
-
-            .brand-name {
-                font-size: 34px;
+            .logo-image {
+                width: 260px;
+                max-width: 85%;
+                margin-bottom: 30px;
             }
 
             h1 {
-                font-size: 30px;
+                font-size: 32px;
             }
 
-            .message {
+            .arabic-title {
+                font-size: 31px;
+            }
+
+            .description {
                 font-size: 16px;
+                line-height: 1.8;
             }
 
-            .contact {
+            .brand-name {
                 font-size: 14px;
+                letter-spacing: 3px;
             }
 
             .footer {
                 margin-top: 40px;
             }
         }
-
     </style>
 </head>
 
-
 <body>
 
-    <div class="page">
+<div class="page">
 
-        <!-- Language Button -->
-        <button
-            class="language-btn"
-            id="languageButton"
-            onclick="toggleLanguage()">
+    <!-- Language Switch -->
+    <div class="language-switch">
+        <button id="languageButton" onclick="toggleLanguage()">
             العربية
         </button>
+    </div>
 
+    <div class="container">
 
-        <div class="container">
+        <!-- Logo -->
+        <img
+            src="logo.png"
+            alt="Beauty by K. Logo"
+            class="logo-image"
+        >
 
-            <!-- Logo -->
-            <img
-                src="logo.png"
-                alt="Beauty by K. Logo"
-                class="logo">
+        <!-- Brand Name -->
+        <div class="brand-name">
+            Beauty by K.
+        </div>
 
+        <!-- English Content -->
+        <div id="englishContent">
 
-            <!-- English Content -->
+            <h1>Coming Soon</h1>
 
-            <div id="englishContent">
+            <div class="line"></div>
 
-                <div class="brand-name">
-                    Beauty by K.
-                </div>
+            <p class="description">
+                Our website is currently under development.<br>
+                We are working on something beautiful and will be
+                launching soon.
+            </p>
 
-                <h1>
-                    Website Coming Soon
-                </h1>
-
-                <div class="line"></div>
-
-                <p class="message">
-                    Our website is currently under development.<br>
-                    We are working on something beautiful for you.<br>
-                    Stay tuned — we will be launching soon.
-                </p>
-
-                <div class="contact">
-
-                    For inquiries, please contact us at<br>
-
-                    <a href="mailto:info@bbk-ksa.com">
-                        info@bbk-ksa.com
-                    </a>
-
-                </div>
-
-                <div class="footer">
-                    © 2026 Beauty by K. All Rights Reserved.
-                </div>
-
+            <div class="contact">
+                For inquiries, please contact us at<br>
+                <a href="mailto:info@bbk-ksa.com">
+                    info@bbk-ksa.com
+                </a>
             </div>
 
+            <div class="footer">
+                © 2026 Beauty by K. All Rights Reserved.
+            </div>
 
-            <!-- Arabic Content -->
+        </div>
 
-            <div
-                id="arabicContent"
-                class="arabic"
-                style="display: none;">
 
-                <!-- اسم المتجر يبقى بالإنجليزي -->
-                <div class="brand-name">
-                    Beauty by K.
-                </div>
+        <!-- Arabic Content -->
+        <div id="arabicContent" style="display: none;">
 
-                <h1>
-                    الموقع قيد الإنشاء
-                </h1>
+            <h1 class="arabic-title">
+                قريبًا
+            </h1>
 
-                <div class="line"></div>
+            <div class="line"></div>
 
-                <p class="message">
-                    موقعنا الإلكتروني قيد التطوير حالياً.<br>
-                    نعمل على تقديم تجربة جميلة ومميزة لكم.<br>
-                    ترقبوا إطلاق موقعنا قريباً.
-                </p>
+            <p class="description">
+                موقعنا الإلكتروني قيد التطوير حاليًا.<br>
+                نعمل على تجهيز تجربة جميلة ومميزة،
+                وسيتم إطلاق الموقع قريبًا.
+            </p>
 
-                <div class="contact">
+            <div class="contact">
+                للاستفسارات، يمكنكم التواصل معنا عبر البريد الإلكتروني<br>
+                <a href="mailto:info@bbk-ksa.com">
+                    info@bbk-ksa.com
+                </a>
+            </div>
 
-                    للاستفسارات، يرجى التواصل معنا عبر البريد الإلكتروني<br>
-
-                    <a href="mailto:info@bbk-ksa.com">
-                        info@bbk-ksa.com
-                    </a>
-
-                </div>
-
-                <div class="footer">
-                    © 2026 Beauty by K. جميع الحقوق محفوظة.
-                </div>
-
+            <div class="footer">
+                © 2026 Beauty by K. جميع الحقوق محفوظة.
             </div>
 
         </div>
 
     </div>
 
-
-    <script>
-
-        let currentLanguage = "en";
+</div>
 
 
-        function toggleLanguage() {
+<script>
 
-            const englishContent =
-                document.getElementById("englishContent");
+    let currentLanguage = "en";
 
-            const arabicContent =
-                document.getElementById("arabicContent");
+    function toggleLanguage() {
 
-            const languageButton =
-                document.getElementById("languageButton");
+        const englishContent = document.getElementById("englishContent");
+        const arabicContent = document.getElementById("arabicContent");
+        const languageButton = document.getElementById("languageButton");
 
-            const html =
-                document.documentElement;
+        if (currentLanguage === "en") {
 
+            // Switch to Arabic
+            englishContent.style.display = "none";
+            arabicContent.style.display = "block";
 
-            if (currentLanguage === "en") {
+            document.documentElement.lang = "ar";
+            document.documentElement.dir = "rtl";
+            document.body.classList.add("arabic");
 
-                /* Switch to Arabic */
+            languageButton.textContent = "English";
 
-                englishContent.style.display = "none";
+            document.title = "Beauty by K. | قريبًا";
 
-                arabicContent.style.display = "block";
+            currentLanguage = "ar";
 
-                html.lang = "ar";
+        } else {
 
-                html.dir = "rtl";
+            // Switch to English
+            arabicContent.style.display = "none";
+            englishContent.style.display = "block";
 
-                languageButton.textContent = "English";
+            document.documentElement.lang = "en";
+            document.documentElement.dir = "ltr";
+            document.body.classList.remove("arabic");
 
-                document.title =
-                    "Beauty by K. | الموقع قيد الإنشاء";
+            languageButton.textContent = "العربية";
 
-                currentLanguage = "ar";
+            document.title = "Beauty by K. | Coming Soon";
 
-            } else {
-
-                /* Switch to English */
-
-                arabicContent.style.display = "none";
-
-                englishContent.style.display = "block";
-
-                html.lang = "en";
-
-                html.dir = "ltr";
-
-                languageButton.textContent = "العربية";
-
-                document.title =
-                    "Beauty by K. | Coming Soon";
-
-                currentLanguage = "en";
-            }
-
+            currentLanguage = "en";
         }
+    }
 
-    </script>
+</script>
 
 </body>
-
 </html>
